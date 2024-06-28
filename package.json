@@ -1,0 +1,43 @@
+{
+  "name": "eruda-tma-cloudstorage",
+  "description": "Eruda plugin for debug  Cloud Storage in Telegram Mini apps",
+  "private": false,
+  "version": "0.0.2",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "format": "prettier \"src/**/*.{ts,css}\" --write",
+    "test": "vitest"
+  },
+  "files": [
+    "dist/",
+    "README.md"
+  ],
+  "module": "./dist/eruda-tma-cloudstorage.js",
+  "main": "./dist/eruda-tma-cloudstorage.js",
+  "types": "./dist/index.d.ts",
+  "keywords": [
+    "eruda",
+    "plugin",
+    "telegram",
+    "tma",
+    "Cloud Storage"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@twa-dev/types": "^7.0.0",
+    "@types/node": "^20.14.9",
+    "eruda": "^3.0.1",
+    "prettier": "^3.3.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.1",
+    "vite-plugin-dts": "^3.9.1",
+    "vite-plugin-string": "^1.2.3",
+    "vitest": "^1.6.0"
+  },
+  "dependencies": {
+    "luna-data-grid": "^0.6.0"
+  }
+}

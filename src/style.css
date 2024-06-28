@@ -1,0 +1,62 @@
+.cloud-storage-wrapper {
+  padding: 10px;
+  font-size: 14px;
+  overflow-y: auto;
+}
+
+.cloud-storage-section .cloud-storage-title {
+  border: 1px solid #CCCCCC;
+  border-bottom: none;
+
+  padding: 10px;
+  line-height: 18px;
+  color: #333333;
+  background-color: #F3F3F3;
+}
+
+.btn {
+  margin-left: 5px;
+  float: right;
+  color: #333333;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+.icon {
+  font-family: eruda-icon !important;
+  display: inline-block;
+
+  font-weight: 400;
+}
+
+.icon-filter:before {
+  content: '\f10c';
+}
+
+.icon-clear:before {
+  content: '\f105';
+}
+
+.icon-delete:before {
+  content: '\f108';
+}
+
+.icon-copy:before {
+  content: '\f107';
+}
+
+.icon-eye:before {
+  content: '\f10b';
+}
+
+.icon-refresh:before {
+  content: '\f10f';
+}
+
+.btn-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default!important;
+}
