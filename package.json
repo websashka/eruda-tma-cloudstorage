@@ -15,6 +15,9 @@
     "dist/",
     "README.md"
   ],
+  "repository": "https://github.com/websashka/awesome-telegram-mini-apps.git",
+  "homepage": "https://github.com/websashka/awesome-telegram-mini-apps",
+  "author": "Aleksandr Popov",
   "module": "./dist/eruda-tma-cloudstorage.js",
   "main": "./dist/eruda-tma-cloudstorage.js",
   "types": "./dist/index.d.ts",
