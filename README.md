@@ -7,12 +7,12 @@
 [npm-url]: https://npmjs.org/package/eruda-tma-cloudstorage
 [license-image]: https://img.shields.io/npm/l/eruda-tma-cloudstorage.svg
 
-Eruda plugin for debug  Cloud Storage in Telegram Mini apps.
+[Eruda](https://eruda.liriliri.io/) plugin for debug  [Cloud Storage](https://core.telegram.org/bots/webapps#cloudstorage) in Telegram Mini apps.
 
 ## Install
 
 ```bash
-npm install eruda-tma-cloudstorage
+npm install eruda eruda-tma-cloudstorage
 ```
 
 ## Usege

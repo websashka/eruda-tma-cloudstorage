@@ -37,7 +37,9 @@ export function CloudStorageDebugger(eruda: Eruda) {
         return;
       }
       try {
+        console.log("Start loading data...");
         const data = await loadData();
+        console.log("Data was loaded.");
         const dataRows = Object.entries(data);
         const element = this._el.html(`<div class="cloud-storage-wrapper">
           <div class="cloud-storage-section">
@@ -61,12 +63,12 @@ export function CloudStorageDebugger(eruda: Eruda) {
                 <span class="icon icon-filter"></span>
               </div>
             </h2>
-            <div id="cloudstorage-table"></div>
+            <div id="cloud-storage-table"></div>
           </div>
         </div>`);
-        const cloudstorageCointainer = element.find("#cloudstorage-table");
+        const cloudstorageCointainer = element.find("#cloud-storage-table");
         if (!cloudstorageCointainer) {
-          throw new Error("Cointainer with cloudstorage-table id not found");
+          throw new Error("Cointainer with cloud-storage-table id not found");
         }
         let selectedNode: any = null;
         element.find(".refresh-storage").on("click", async () => {
@@ -112,6 +114,17 @@ export function CloudStorageDebugger(eruda: Eruda) {
         });
         this._dataGrid?.on("select", (node) => (selectedNode = node));
         this._dataGrid?.on("deselect", () => (selectedNode = null));
+        this._dataGrid.container.querySelectorAll("td").forEach((item) => {
+          const contentEl = document.createElement("span");
+          const tooltipEl = document.createElement("span");
+          contentEl.classList.add("content");
+          tooltipEl.classList.add("tooltip");
+          contentEl.textContent = item.textContent;
+          tooltipEl.textContent = item.textContent;
+          item.textContent = null;
+          item.appendChild(contentEl);
+          item.appendChild(tooltipEl);
+        });
       } catch (e) {
         console.error("Error load data form Cloud Storage", e);
       }
